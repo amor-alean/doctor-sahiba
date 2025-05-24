@@ -292,6 +292,322 @@
             text-align: center;
         }
         
+        /* Hindi Poem Section */
+        .hindi-poem-section {
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 182, 193, 0.2));
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .poem-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem;
+        }
+        
+        .poem-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(3rem, 7vw, 4.5rem);
+            color: #ff1493;
+            margin-bottom: 3rem;
+            text-shadow: 0 3px 10px rgba(255, 20, 147, 0.3);
+            animation: float-gentle 3s ease-in-out infinite;
+            letter-spacing: 2px;
+        }
+        
+        .poem-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem 2rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(255, 105, 180, 0.3);
+            position: relative;
+            transform: translateZ(30px);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 105, 180, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .poem-content:hover {
+            transform: translateZ(40px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(255, 105, 180, 0.4);
+            border-color: rgba(255, 105, 180, 0.4);
+        }
+        
+        .poem-line {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            color: #c71585;
+            line-height: 2;
+            margin: 0.8rem 0;
+            opacity: 0;
+            animation: fadeInPoem 1s ease-out forwards;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            letter-spacing: 1px;
+            display: block;
+            width: 100%;
+            transition: all 0.3s;
+            cursor: default;
+        }
+        
+        .poem-line:hover {
+            transform: scale(1.05);
+            color: #ff1493;
+            text-shadow: 0 2px 10px rgba(255, 20, 147, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .poem-line {
+                font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+                line-height: 1.8;
+                margin: 0.6rem 0;
+            }
+            
+            .poem-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .poem-title {
+                font-size: clamp(2.5rem, 6vw, 3.5rem);
+                margin-bottom: 2rem;
+            }
+            
+            .floating-hearts span {
+                font-size: 20px !important;
+            }
+        }
+        
+        .poem-line:nth-child(1) { animation-delay: 0.2s; }
+        .poem-line:nth-child(2) { animation-delay: 0.4s; }
+        .poem-line:nth-child(3) { animation-delay: 0.6s; }
+        .poem-line:nth-child(4) { animation-delay: 0.8s; }
+        .poem-line:nth-child(6) { animation-delay: 1s; }
+        .poem-line:nth-child(7) { animation-delay: 1.2s; }
+        .poem-line:nth-child(8) { animation-delay: 1.4s; }
+        .poem-line:nth-child(9) { animation-delay: 1.6s; }
+        .poem-line:nth-child(11) { animation-delay: 1.8s; }
+        .poem-line:nth-child(12) { animation-delay: 2s; }
+        .poem-line:nth-child(13) { animation-delay: 2.2s; }
+        .poem-line:nth-child(14) { animation-delay: 2.4s; }
+        
+        .poem-content div {
+            animation: fadeInPoem 1s ease-out 1s forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeInPoem {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Floating rose petals for poem section */
+        .hindi-poem-section::before,
+        .hindi-poem-section::after {
+            content: '🌹';
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.3;
+            animation: float-rose 10s infinite ease-in-out;
+        }
+        
+        .hindi-poem-section::before {
+            top: 10%;
+            left: 5%;
+        }
+        
+        .hindi-poem-section::after {
+            bottom: 10%;
+            right: 5%;
+            animation-delay: 5s;
+        }
+        
+        @keyframes float-rose {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+        }
+        
+        /* Hindi Poem Section */
+        .hindi-poem-section {
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 182, 193, 0.2));
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .poem-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem;
+        }
+        
+        .poem-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(3rem, 7vw, 4.5rem);
+            color: #ff1493;
+            margin-bottom: 3rem;
+            text-shadow: 0 3px 10px rgba(255, 20, 147, 0.3);
+            animation: float-gentle 3s ease-in-out infinite;
+            letter-spacing: 2px;
+        }
+        
+        .poem-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem 2rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(255, 105, 180, 0.3);
+            position: relative;
+            transform: translateZ(30px);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 105, 180, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .poem-content:hover {
+            transform: translateZ(40px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(255, 105, 180, 0.4);
+            border-color: rgba(255, 105, 180, 0.4);
+        }
+        
+        .poem-line {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            color: #c71585;
+            line-height: 2;
+            margin: 0.8rem 0;
+            opacity: 0;
+            animation: fadeInPoem 1s ease-out forwards;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            letter-spacing: 1px;
+            display: block;
+            width: 100%;
+            transition: all 0.3s;
+            cursor: default;
+        }
+        
+        .poem-line:hover {
+            transform: scale(1.05);
+            color: #ff1493;
+            text-shadow: 0 2px 10px rgba(255, 20, 147, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .poem-line {
+                font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+                line-height: 1.8;
+                margin: 0.6rem 0;
+            }
+            
+            .poem-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .poem-title {
+                font-size: clamp(2.5rem, 6vw, 3.5rem);
+                margin-bottom: 2rem;
+            }
+            
+            .floating-hearts span {
+                font-size: 20px !important;
+            }
+        }
+        
+        .poem-line:nth-child(1) { animation-delay: 0.2s; }
+        .poem-line:nth-child(2) { animation-delay: 0.4s; }
+        .poem-line:nth-child(3) { animation-delay: 0.6s; }
+        .poem-line:nth-child(4) { animation-delay: 0.8s; }
+        .poem-line:nth-child(6) { animation-delay: 1s; }
+        .poem-line:nth-child(7) { animation-delay: 1.2s; }
+        .poem-line:nth-child(8) { animation-delay: 1.4s; }
+        .poem-line:nth-child(9) { animation-delay: 1.6s; }
+        .poem-line:nth-child(11) { animation-delay: 1.8s; }
+        .poem-line:nth-child(12) { animation-delay: 2s; }
+        .poem-line:nth-child(13) { animation-delay: 2.2s; }
+        .poem-line:nth-child(14) { animation-delay: 2.4s; }
+        
+        .poem-content div {
+            animation: fadeInPoem 1s ease-out 1s forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeInPoem {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Floating rose petals for poem section */
+        .hindi-poem-section::before,
+        .hindi-poem-section::after {
+            content: '🌹';
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.3;
+            animation: float-rose 10s infinite ease-in-out;
+        }
+        
+        .hindi-poem-section::before {
+            top: 10%;
+            left: 5%;
+        }
+        
+        .hindi-poem-section::after {
+            bottom: 10%;
+            right: 5%;
+            animation-delay: 5s;
+        }
+        
+        @keyframes float-rose {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+        }
+        
         /* 3D Buttons */
         .button-section {
             text-align: center;
@@ -467,6 +783,8 @@
         .timeline-item:nth-child(1) { animation-delay: 0.2s; }
         .timeline-item:nth-child(2) { animation-delay: 0.4s; }
         .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+        .timeline-item:nth-child(5) { animation-delay: 1s; }
         
         @keyframes slideInTimeline {
             from {
@@ -711,6 +1029,16 @@
             to { text-shadow: 0 0 20px rgba(255, 20, 147, 0.8), 0 0 30px rgba(255, 105, 180, 0.5); }
         }
         
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes glow {
+            from { filter: brightness(1); }
+            to { filter: brightness(1.2); }
+        }
+        
         /* Sparkle cursor effect */
         .sparkle {
             position: fixed;
@@ -768,6 +1096,8 @@
             background: none;
             padding: 1rem;
         }
+        
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .timeline::before {
                 left: 2rem;
@@ -862,31 +1192,39 @@
         </section>
         
         <!-- Hindi Poem Section -->
-         <center>
+        <center>
         <section class="hindi-poem-section">
-            
+            <div class="floating-hearts">
+                <span style="position: absolute; top: 5%; left: 10%; font-size: 30px; opacity: 0.3; animation: float-gentle 4s infinite;">💖</span>
+                <span style="position: absolute; top: 15%; right: 15%; font-size: 25px; opacity: 0.3; animation: float-gentle 5s infinite;">💕</span>
+                <span style="position: absolute; bottom: 10%; left: 20%; font-size: 28px; opacity: 0.3; animation: float-gentle 6s infinite;">💗</span>
+                <span style="position: absolute; bottom: 20%; right: 10%; font-size: 32px; opacity: 0.3; animation: float-gentle 4.5s infinite;">💝</span>
+            </div>
             <div class="poem-container">
-                <h2 class="poem-title">मेरे दिल की बात 💕</h2>
+                <h2 class="poem-title">💝 मेरे दिल की बात 💝</h2>
                 <div class="poem-content">
                     <p class="poem-line">तेरी आँखों में खो जाऊं मैं 😍</p>
                     <p class="poem-line">तेरी बाहों में सो जाऊं मैं 🤗</p>
                     <p class="poem-line">तू जो मिली है तो जाना मैंने 🥰</p>
                     <p class="poem-line">क्या है खुशी, क्या है जीना मैंने 🌹</p>
-            
-                    <p class="poem-line" style="margin-top: 1.5rem;">तेरे बिना अधूरी है ये जिंदगी 💔</p>
+                    
+                    <div style="text-align: center; margin: 2rem 0; font-size: 1.5rem; opacity: 0.5;">💕 💕 💕</div>
+                    
+                    <p class="poem-line">तेरे बिना अधूरी है ये जिंदगी 💔</p>
                     <p class="poem-line">तू है मेरी सांसों की बंदगी 🕊️</p>
                     <p class="poem-line">हर पल तेरा ही ख्याल आता है 💭</p>
                     <p class="poem-line">दिल ये तेरा ही नाम गाता है 💖</p>
-            
-                    <p class="poem-line" style="margin-top: 1.5rem;">चाँद से भी ज्यादा रोशन है तेरा चेहरा 🌙</p>
+                    
+                    <div style="text-align: center; margin: 2rem 0; font-size: 1.5rem; opacity: 0.5;">💕 💕 💕</div>
+                    
+                    <p class="poem-line">चाँद से भी ज्यादा रोशन है तेरा चेहरा 🌙</p>
                     <p class="poem-line">तेरे साथ हर लम्हा है मेरा सहारा 🤝</p>
                     <p class="poem-line">तुझसे ही शुरू, तुझपे ही खत्म 🔁</p>
-                    <p class="poem-line">तू ही है मेरी मोहब्बत का हासिल ✨</p>
+                    <p class="poem-line">तू ही है मेरी मोहब्बत का हासिल ✨💕</p>
                 </div>
             </div>
-            
         </section>
-</center>
+        </center>
         
         <!-- Interactive Buttons -->
         <section class="button-section">
@@ -955,7 +1293,6 @@
             </div>
         </section>
         
-        
         <!-- Timeline Section -->
         <section class="timeline-section">
             <h2 class="timeline-title">Our Love Story</h2>
@@ -996,19 +1333,17 @@
                     <div class="timeline-content">
                         <h3>Still Waiting ⏳</h3>
                         <p>
-                            It’s been <span id="hourCounter">...</span> hours since 30 Jan 2019 — and I’m still here, loving you 💖
+                            It's been <span id="hourCounter">...</span> hours since 30 Jan 2019 — and I'm still here, loving you 💖
                             <br>
                             <div id="runningClock" style="margin-top: 0.5rem; font-weight: bold; color: #d63384;">
                               Waiting since: ...
                             </div>
-                          </p>
-                          
+                        </p>
                     </div>
                     <div class="timeline-heart">⏰</div>
                 </div>
             </div>
         </section>
-        
         
         <!-- Send Love Section -->
         <section class="send-love-section">
@@ -1018,13 +1353,12 @@
         <!-- Footer -->
         <footer class="footer">
             <p class="footer-text">
-                With every heartbeat, I’m yours forever,<br>
+                With every heartbeat, I'm yours forever,<br>
                 <span style="font-family: 'Dancing Script', cursive; font-size: 2.5rem; display: inline-block; margin-top: 0.5rem;">
                     — Saurabh 💖
                 </span>
             </p>
         </footer>
-        
     </div>
     
     <!-- Modal -->
@@ -1078,77 +1412,840 @@
             }, 1000);
         }
         
-        // Show surprise with 3D confetti
+        // Show surprise with magical reveal
         function showSurprise() {
-            // Create 3D confetti
-            for (let i = 0; i < 100; i++) {
+            // Create loading overlay
+            const loadingOverlay = document.createElement('div');
+            loadingOverlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                z-index: 2000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: fadeIn 0.5s ease-out;
+            `;
+            
+            loadingOverlay.innerHTML = `
+                <div style="text-align: center;">
+                    <h2 style="font-family: 'Dancing Script', cursive; font-size: 3rem; color: white; margin-bottom: 2rem;">
+                        Preparing Something Magical... ✨
+                    </h2>
+                    <div style="font-size: 2rem;">
+                        <span style="animation: pulse 1s infinite;">💕</span>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(loadingOverlay);
+            
+            // After loading, show magical reveal
+            setTimeout(() => {
+                loadingOverlay.remove();
+                createMagicalReveal();
+            }, 2000);
+        }
+        
+        // Create magical reveal page
+        function createMagicalReveal() {
+            // Configuration
+            const STRIPS = 150; // Number of strips for reveal animation
+            const STAR_COUNT = 100; // Number of stars in finale
+            const HER_IMAGE_URL = 'image3.jpg'; // Using her photo
+            const YOUR_SONG_URL = 'song2.mp3'; // Special surprise song
+            
+            // Hide main content
+            document.getElementById('mainContent').style.display = 'none';
+            
+            // Create reveal container
+            const revealContainer = document.createElement('div');
+            revealContainer.id = 'magicalReveal';
+            revealContainer.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0f 100%);
+                z-index: 2000;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            `;
+            
+            // Add title
+            const title = document.createElement('h1');
+            title.style.cssText = `
+                font-family: 'Dancing Script', cursive;
+                font-size: clamp(2rem, 5vw, 4rem);
+                color: white;
+                margin-bottom: 2rem;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+                opacity: 0;
+                animation: fadeInTitle 2s ease-out forwards;
+                text-align: center;
+                padding: 0 1rem;
+            `;
+            title.textContent = 'The Most Beautiful Person in My World 💕';
+            
+            // Create canvas for image reveal
+            const canvas = document.createElement('canvas');
+            canvas.style.cssText = `
+                max-width: 90%;
+                max-height: 60vh;
+                border-radius: 20px;
+                box-shadow: 0 0 50px rgba(255, 105, 180, 0.5);
+                opacity: 0;
+                animation: fadeInCanvas 1s ease-out 1s forwards;
+            `;
+            
+            // Create audio element
+            const audio = document.createElement('audio');
+            audio.src = YOUR_SONG_URL;
+            audio.volume = 0.3;
+            
+            // Create message below image
+            const message = document.createElement('p');
+            message.style.cssText = `
+                font-family: 'Quicksand', sans-serif;
+                font-size: clamp(1rem, 2.5vw, 1.5rem);
+                color: white;
+                margin-top: 2rem;
+                text-align: center;
+                opacity: 0;
+                animation: fadeInMessage 2s ease-out 3s forwards;
+                padding: 0 2rem;
+                line-height: 1.6;
+            `;
+            message.innerHTML = 'Every moment without you feels incomplete<br>You are my everything 💖';
+            
+            // Continue button to interactive page
+            const continueButton = document.createElement('button');
+            continueButton.style.cssText = `
+                margin-top: 2rem;
+                padding: 1rem 2.5rem;
+                background: linear-gradient(135deg, #ff69b4, #ff1493);
+                color: white;
+                border: none;
+                border-radius: 50px;
+                font-size: 1.2rem;
+                font-family: 'Dancing Script', cursive;
+                cursor: pointer;
+                opacity: 0;
+                animation: fadeIn 1s ease-out 5s forwards;
+                transition: all 0.3s;
+                box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
+            `;
+            continueButton.textContent = 'Explore Our Love Universe 🌌';
+            continueButton.onclick = () => {
+                revealContainer.style.opacity = '0';
                 setTimeout(() => {
-                    const confetti = document.createElement('div');
-                    confetti.className = 'confetti-3d';
-                    confetti.style.left = Math.random() * window.innerWidth + 'px';
-                    confetti.style.backgroundColor = ['#ff69b4', '#ff1493', '#ffb6c1', '#fff', '#ffd700'][Math.floor(Math.random() * 5)];
-                    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-                    document.body.appendChild(confetti);
-                    
-                    setTimeout(() => confetti.remove(), 3000);
-                }, i * 30);
+                    revealContainer.remove();
+                    createSurprisePage();
+                }, 500);
+            };
+            
+            // Back button
+            const backButton = document.createElement('button');
+            backButton.style.cssText = `
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                padding: 10px 20px;
+                background: rgba(255, 255, 255, 0.1);
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                color: white;
+                border-radius: 50px;
+                cursor: pointer;
+                font-family: 'Quicksand', sans-serif;
+                backdrop-filter: blur(10px);
+                transition: all 0.3s;
+                opacity: 0;
+                animation: fadeIn 1s ease-out 4s forwards;
+            `;
+            backButton.textContent = '← Back';
+            backButton.onclick = () => {
+                revealContainer.style.opacity = '0';
+                setTimeout(() => {
+                    revealContainer.remove();
+                    document.getElementById('mainContent').style.display = 'block';
+                }, 500);
+            };
+            
+            // Append elements
+            revealContainer.appendChild(backButton);
+            revealContainer.appendChild(title);
+            revealContainer.appendChild(canvas);
+            revealContainer.appendChild(message);
+            revealContainer.appendChild(continueButton);
+            revealContainer.appendChild(audio);
+            document.body.appendChild(revealContainer);
+            
+            // Add animations
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeInTitle {
+                    to { opacity: 1; transform: translateY(0); }
+                    from { opacity: 0; transform: translateY(-20px); }
+                }
+                @keyframes fadeInCanvas {
+                    to { opacity: 1; transform: scale(1); }
+                    from { opacity: 0; transform: scale(0.9); }
+                }
+                @keyframes fadeInMessage {
+                    to { opacity: 1; }
+                    from { opacity: 0; }
+                }
+                @keyframes fadeIn {
+                    to { opacity: 1; }
+                    from { opacity: 0; }
+                }
+                @keyframes star-fall {
+                    0% {
+                        opacity: 1;
+                        transform: translate(0, 0) scale(0);
+                    }
+                    50% {
+                        opacity: 1;
+                        transform: translate(var(--tx), var(--ty)) scale(1);
+                    }
+                    100% {
+                        opacity: 0;
+                        transform: translate(calc(var(--tx) * 2), calc(var(--ty) * 2)) scale(0.5);
+                    }
+                }
+                .star {
+                    position: absolute;
+                    width: 4px;
+                    height: 4px;
+                    background: white;
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px #ff69b4;
+                    animation: star-fall 2s ease-out forwards;
+                    pointer-events: none;
+                }
+                @keyframes float-gentle {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-10px); }
+                }
+                @keyframes pulse {
+                    0%, 100% { transform: scale(1); }
+                    50% { transform: scale(1.2); }
+                }
+                @keyframes float {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-20px); }
+                }
+                @keyframes twinkle {
+                    0%, 100% { opacity: 0.3; }
+                    50% { opacity: 1; }
+                }
+                @keyframes flyHeart {
+                    to {
+                        transform: translateX(${Math.random() * 200 - 100}px) translateY(-200px) rotate(${Math.random() * 360}deg);
+                        opacity: 0;
+                    }
+                }
+                @keyframes sparkleOut {
+                    to {
+                        transform: translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px);
+                        opacity: 0;
+                    }
+                }
+                @keyframes floatAway {
+                    to {
+                        transform: translateX(-50%) translateY(-500px) rotate(360deg);
+                        opacity: 0;
+                    }
+                }
+                @keyframes glow {
+                    from { filter: brightness(1); }
+                    to { filter: brightness(1.2); }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Load and reveal image
+            const img = new Image();
+            img.onload = function() {
+                // Set canvas size to match image aspect ratio
+                const maxWidth = window.innerWidth * 0.9;
+                const maxHeight = window.innerHeight * 0.6;
+                let width = img.width;
+                let height = img.height;
+                
+                // Scale down if needed
+                if (width > maxWidth) {
+                    height = (maxWidth / width) * height;
+                    width = maxWidth;
+                }
+                if (height > maxHeight) {
+                    width = (maxHeight / height) * width;
+                    height = maxHeight;
+                }
+                
+                canvas.width = width;
+                canvas.height = height;
+                
+                const ctx = canvas.getContext('2d');
+                const stripHeight = height / STRIPS;
+                let currentStrip = 0;
+                let audioStarted = false;
+                
+                // Reveal animation
+                function revealStrip() {
+                    if (currentStrip < STRIPS) {
+                        // Draw one strip
+                        ctx.drawImage(
+                            img,
+                            0, currentStrip * stripHeight,
+                            width, stripHeight,
+                            0, currentStrip * stripHeight,
+                            width, stripHeight
+                        );
+                        
+                        // Start audio on first strip
+                        if (!audioStarted) {
+                            audio.play().catch(e => console.log('Audio autoplay prevented'));
+                            audioStarted = true;
+                        }
+                        
+                        currentStrip++;
+                        requestAnimationFrame(revealStrip);
+                    } else {
+                        // Image fully revealed - create star burst
+                        setTimeout(createStarBurst, 500);
+                    }
+                }
+                
+                // Start reveal after canvas fades in
+                setTimeout(revealStrip, 1500);
+            };
+            
+            img.src = HER_IMAGE_URL;
+            
+            // Create star burst effect
+            function createStarBurst() {
+                const rect = canvas.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                
+                for (let i = 0; i < STAR_COUNT; i++) {
+                    setTimeout(() => {
+                        const star = document.createElement('div');
+                        star.className = 'star';
+                        
+                        // Random angle and distance
+                        const angle = (Math.PI * 2 * i) / STAR_COUNT + (Math.random() - 0.5);
+                        const distance = 200 + Math.random() * 300;
+                        const tx = Math.cos(angle) * distance;
+                        const ty = Math.sin(angle) * distance;
+                        
+                        star.style.cssText += `
+                            left: ${centerX}px;
+                            top: ${centerY}px;
+                            --tx: ${tx}px;
+                            --ty: ${ty}px;
+                            animation-delay: ${Math.random() * 0.5}s;
+                        `;
+                        
+                        revealContainer.appendChild(star);
+                        
+                        // Remove star after animation
+                        setTimeout(() => star.remove(), 2000);
+                    }, i * 10);
+                }
+                
+                // Add floating hearts around the image
+                createFloatingHearts(centerX, centerY);
             }
             
-            // Show floating message
-            setTimeout(() => {
-                const message = document.createElement('div');
-                message.className = 'floating-message';
-                message.innerHTML = `
-                    <h2 style="font-family: 'Dancing Script', cursive; font-size: 3rem; color: #ff1493; margin-bottom: 1rem;">
-                        I Love You Forever 💕
-                    </h2>
-                    <p style="font-size: 1.2rem; color: #666;">You mean everything to me</p>
-                    <div style="margin-top: 1rem;">💖💖💖</div>
-                `;
-                document.body.appendChild(message);
+            // Create floating hearts
+            function createFloatingHearts(centerX, centerY) {
+                const hearts = ['💕', '💖', '💗', '💝', '💓'];
+                for (let i = 0; i < 20; i++) {
+                    setTimeout(() => {
+                        const heart = document.createElement('div');
+                        heart.style.cssText = `
+                            position: absolute;
+                            left: ${centerX + (Math.random() - 0.5) * 400}px;
+                            top: ${centerY + (Math.random() - 0.5) * 300}px;
+                            font-size: ${20 + Math.random() * 20}px;
+                            opacity: 0;
+                            animation: floatHeart 4s ease-out forwards;
+                            pointer-events: none;
+                        `;
+                        heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                        revealContainer.appendChild(heart);
+                        
+                        setTimeout(() => heart.remove(), 4000);
+                    }, i * 200);
+                }
                 
-                setTimeout(() => message.remove(), 4000);
-            }, 1500);
+                // Add float animation if not exists
+                if (!document.getElementById('floatHeartStyle')) {
+                    const floatStyle = document.createElement('style');
+                    floatStyle.id = 'floatHeartStyle';
+                    floatStyle.textContent = `
+                        @keyframes floatHeart {
+                            0% { opacity: 0; transform: translateY(20px) scale(0); }
+                            20% { opacity: 1; transform: translateY(0) scale(1); }
+                            100% { opacity: 0; transform: translateY(-100px) scale(0.5); }
+                        }
+                    `;
+                    document.head.appendChild(floatStyle);
+                }
+            }
         }
+        
+        // Create special surprise page with interactive features
+        function createSurprisePage() {
+            // Hide main content
+            document.getElementById('mainContent').style.display = 'none';
+            
+            // Create surprise page container
+            const surprisePage = document.createElement('div');
+            surprisePage.id = 'surprisePage';
+            surprisePage.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+                overflow: auto;
+                z-index: 2000;
+                animation: fadeIn 1s ease-out;
+            `;
+            
+            surprisePage.innerHTML = `
+                <!-- Star Background -->
+                <div id="starField" style="position: fixed; width: 100%; height: 100%; pointer-events: none;"></div>
+                
+                <!-- Back Button -->
+                <button onclick="backToMain()" style="
+                    position: fixed;
+                    top: 20px;
+                    left: 20px;
+                    padding: 10px 20px;
+                    background: rgba(255, 255, 255, 0.1);
+                    border: 2px solid rgba(255, 255, 255, 0.3);
+                    color: white;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    font-family: 'Quicksand', sans-serif;
+                    backdrop-filter: blur(10px);
+                    transition: all 0.3s;
+                    z-index: 2001;
+                ">← Back to Love Letter</button>
+                
+                <!-- Main Content -->
+                <div style="position: relative; z-index: 10; padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
+                    <!-- Title -->
+                    <h1 style="
+                        text-align: center;
+                        font-family: 'Dancing Script', cursive;
+                        font-size: clamp(3rem, 8vw, 5rem);
+                        background: linear-gradient(45deg, #ff6ec7, #ff9472, #ffd700);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        margin-bottom: 3rem;
+                        animation: glow 2s ease-in-out infinite alternate;
+                    ">Our Love Universe 🌌</h1>
+                    
+                    <!-- Interactive Love Journey -->
+                    <div class="love-journey" style="margin-bottom: 4rem;">
+                        <h2 style="color: white; text-align: center; font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 2rem;">
+                            Click Each Star to Discover Our Memories ✨
+                        </h2>
+                        
+                        <div id="interactiveStars" style="
+                            position: relative;
+                            height: 400px;
+                            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+                            border-radius: 20px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            gap: 3rem;
+                            padding: 2rem;
+                        "></div>
+                    </div>
+                    
+                    <!-- Love Calculator Game -->
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 3rem; border-radius: 30px; margin-bottom: 4rem; backdrop-filter: blur(10px);">
+                        <h2 style="color: white; text-align: center; font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 2rem;">
+                            Love Calculator 💕
+                        </h2>
+                        <div style="text-align: center;">
+                            <input type="text" id="name1" placeholder="Your Name" value="Saurabh" style="
+                                padding: 1rem;
+                                margin: 0.5rem;
+                                border-radius: 50px;
+                                border: none;
+                                background: rgba(255, 255, 255, 0.9);
+                                font-size: 1.2rem;
+                                width: 200px;
+                            ">
+                            <span style="color: white; font-size: 2rem; margin: 0 1rem;">❤️</span>
+                            <input type="text" id="name2" placeholder="Her Name" value="Doctor Sahiba" style="
+                                padding: 1rem;
+                                margin: 0.5rem;
+                                border-radius: 50px;
+                                border: none;
+                                background: rgba(255, 255, 255, 0.9);
+                                font-size: 1.2rem;
+                                width: 200px;
+                            ">
+                            <button onclick="calculateLove()" style="
+                                display: block;
+                                margin: 2rem auto;
+                                padding: 1rem 3rem;
+                                background: linear-gradient(135deg, #ff69b4, #ff1493);
+                                color: white;
+                                border: none;
+                                border-radius: 50px;
+                                font-size: 1.3rem;
+                                cursor: pointer;
+                                transition: transform 0.3s;
+                            ">Calculate Our Love</button>
+                            <div id="loveResult" style="
+                                margin-top: 2rem;
+                                font-size: 3rem;
+                                color: white;
+                                font-family: 'Dancing Script', cursive;
+                                text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+                            "></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Virtual Love Lock -->
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 3rem; border-radius: 30px; margin-bottom: 4rem; text-align: center;">
+                        <h2 style="color: white; font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 2rem;">
+                            Lock Our Love Forever 🔒
+                        </h2>
+                        <div id="loveLock" style="
+                            width: 200px;
+                            height: 250px;
+                            margin: 0 auto;
+                            position: relative;
+                            cursor: pointer;
+                            transition: transform 0.3s;
+                        " onclick="lockLove()">
+                            <div style="
+                                width: 200px;
+                                height: 200px;
+                                background: linear-gradient(135deg, #ffd700, #ffed4b);
+                                border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+                                position: relative;
+                                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 4rem;
+                            ">🔓</div>
+                            <div style="
+                                width: 120px;
+                                height: 80px;
+                                background: linear-gradient(135deg, #ffd700, #ffed4b);
+                                position: absolute;
+                                top: -40px;
+                                left: 40px;
+                                border-radius: 60px 60px 0 0;
+                                border: 20px solid #ffed4b;
+                                border-bottom: none;
+                            "></div>
+                        </div>
+                        <p style="color: white; margin-top: 2rem; font-size: 1.2rem;">Click the lock to seal our love forever!</p>
+                    </div>
+                    
+                    <!-- Message in a Bottle -->
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 3rem; border-radius: 30px; backdrop-filter: blur(10px); text-align: center;">
+                        <h2 style="color: white; font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 2rem;">
+                            Message in a Bottle 💌
+                        </h2>
+                        <textarea id="loveMessage" placeholder="Write a secret message for Saurabh..." style="
+                            width: 100%;
+                            max-width: 500px;
+                            height: 150px;
+                            padding: 1rem;
+                            border-radius: 20px;
+                            border: none;
+                            background: rgba(255, 255, 255, 0.9);
+                            font-size: 1.1rem;
+                            font-family: 'Quicksand', sans-serif;
+                            resize: none;
+                        "></textarea>
+                        <button onclick="sendBottleMessage()" style="
+                            display: block;
+                            margin: 2rem auto;
+                            padding: 1rem 3rem;
+                            background: linear-gradient(135deg, #00b4d8, #0077b6);
+                            color: white;
+                            border: none;
+                            border-radius: 50px;
+                            font-size: 1.3rem;
+                            cursor: pointer;
+                            transition: transform 0.3s;
+                        ">Send into the Ocean 🌊</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(surprisePage);
+            
+            // Initialize surprise page features
+            initializeSurprisePage();
+        }
+        
+        // Initialize surprise page interactive elements
+        function initializeSurprisePage() {
+            // Create animated star field background
+            const starField = document.getElementById('starField');
+            for (let i = 0; i < 200; i++) {
+                const star = document.createElement('div');
+                star.style.cssText = `
+                    position: absolute;
+                    width: 2px;
+                    height: 2px;
+                    background: white;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    opacity: ${Math.random()};
+                    animation: twinkle ${Math.random() * 5 + 5}s linear infinite;
+                `;
+                starField.appendChild(star);
+            }
+            
+            // Create interactive memory stars with custom memories
+            const memories = [
+                { emoji: '🌟', title: '30 Jan 2019', message: 'The day my heart found its home' },
+                { emoji: '💫', title: '27 Oct 2019', message: 'When I asked you to be mine forever' },
+                { emoji: '⭐', title: '22 Sept', message: 'Your birthday - the day angels smiled' },
+                { emoji: '✨', title: 'Still Waiting', message: `So many hours of loving you` },
+                { emoji: '🌠', title: 'Forever', message: 'In every lifetime, I\'ll find you' }
+            ];
+            
+            const starsContainer = document.getElementById('interactiveStars');
+            memories.forEach((memory, index) => {
+                const star = document.createElement('div');
+                star.style.cssText = `
+                    font-size: 3rem;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    animation: float ${3 + index * 0.5}s ease-in-out infinite;
+                    animation-delay: ${index * 0.2}s;
+                `;
+                star.innerHTML = memory.emoji;
+                star.onclick = () => showMemory(memory);
+                starsContainer.appendChild(star);
+            });
+        }
+        
+        // Show memory popup
+        function showMemory(memory) {
+            const popup = document.createElement('div');
+            popup.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 182, 193, 0.5));
+                padding: 2rem 3rem;
+                border-radius: 20px;
+                text-align: center;
+                z-index: 3000;
+                animation: popIn 0.5s ease-out forwards;
+            `;
+            popup.innerHTML = `
+                <h3 style="font-family: 'Dancing Script', cursive; font-size: 2rem; color: #ff1493; margin-bottom: 1rem;">
+                    ${memory.title}
+                </h3>
+                <p style="color: #666; font-size: 1.2rem;">${memory.message}</p>
+                <button onclick="this.parentElement.remove()" style="
+                    margin-top: 1rem;
+                    padding: 0.5rem 2rem;
+                    background: #ff69b4;
+                    color: white;
+                    border: none;
+                    border-radius: 20px;
+                    cursor: pointer;
+                ">Close</button>
+            `;
+            document.body.appendChild(popup);
+        }
+        
+        // Calculate love function
+        function calculateLove() {
+            const name1 = document.getElementById('name1').value;
+            const name2 = document.getElementById('name2').value;
+            const result = document.getElementById('loveResult');
+            
+            if (name1 && name2) {
+                // Special case for Saurabh and Doctor Sahiba
+                let percentage;
+                if ((name1.toLowerCase().includes('saurabh') && name2.toLowerCase().includes('sahiba')) ||
+                    (name2.toLowerCase().includes('saurabh') && name1.toLowerCase().includes('sahiba'))) {
+                    percentage = 100;
+                    result.innerHTML = `∞ Infinite Love! 💕`;
+                } else {
+                    percentage = Math.floor(Math.random() * 20) + 80;
+                    result.innerHTML = `${percentage}% Pure Love! 💕`;
+                }
+                
+                // Create hearts explosion
+                for (let i = 0; i < 20; i++) {
+                    setTimeout(() => {
+                        const heart = document.createElement('div');
+                        heart.innerHTML = '❤️';
+                        heart.style.cssText = `
+                            position: fixed;
+                            left: 50%;
+                            top: 60%;
+                            font-size: 2rem;
+                            animation: flyHeart 2s ease-out forwards;
+                            z-index: 3000;
+                        `;
+                        document.body.appendChild(heart);
+                        setTimeout(() => heart.remove(), 2000);
+                    }, i * 100);
+                }
+            }
+        }
+        
+        // Lock love function
+        function lockLove() {
+            const lock = document.getElementById('loveLock');
+            lock.style.transform = 'scale(1.2)';
+            lock.querySelector('div').innerHTML = '🔒';
+            
+            // Create sparkles
+            for (let i = 0; i < 30; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.style.cssText = `
+                    position: fixed;
+                    width: 4px;
+                    height: 4px;
+                    background: gold;
+                    left: 50%;
+                    top: 50%;
+                    border-radius: 50%;
+                    animation: sparkleOut 1s ease-out forwards;
+                    z-index: 3000;
+                `;
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+            
+            setTimeout(() => {
+                lock.style.transform = 'scale(1)';
+            }, 300);
+        }
+        
+        // Send bottle message function
+        function sendBottleMessage() {
+            const message = document.getElementById('loveMessage').value;
+            if (message) {
+                // Create bottle animation
+                const bottle = document.createElement('div');
+                bottle.innerHTML = '🍾';
+                bottle.style.cssText = `
+                    position: fixed;
+                    bottom: 20%;
+                    left: 50%;
+                    font-size: 3rem;
+                    transform: translateX(-50%);
+                    animation: floatAway 3s ease-out forwards;
+                    z-index: 3000;
+                `;
+                document.body.appendChild(bottle);
+                
+                setTimeout(() => {
+                    bottle.remove();
+                    document.getElementById('loveMessage').value = '';
+                    alert('Your message has been sent to the ocean of love! 🌊💕');
+                }, 3000);
+            }
+        }
+        
+        // Back to main page
+        function backToMain() {
+            const surprisePage = document.getElementById('surprisePage');
+            const magicalReveal = document.getElementById('magicalReveal');
+            
+            if (surprisePage) {
+                surprisePage.style.opacity = '0';
+                setTimeout(() => {
+                    surprisePage.remove();
+                    document.getElementById('mainContent').style.display = 'block';
+                }, 500);
+            }
+            
+            if (magicalReveal) {
+                magicalReveal.style.opacity = '0';
+                setTimeout(() => {
+                    magicalReveal.remove();
+                    document.getElementById('mainContent').style.display = 'block';
+                }, 500);
+            }
+        }
+        
+        // Hour counter function
+        function updateHourCounter() {
+            const startDate = new Date("2019-01-30T00:00:00");
+            const now = new Date();
+            const diffTime = Math.abs(now - startDate);
+            const diffHours = Math.ceil(diffTime / (1000 * 60 * 60));
+            
+            const counterElement = document.getElementById("hourCounter");
+            if (counterElement) {
+                counterElement.textContent = diffHours.toLocaleString();
+            }
+        }
+        
+        // Running Clock Since 30 Jan 2019
+        function updateRunningClock() {
+            const startDate = new Date("2019-01-30T00:00:00");
+            const now = new Date();
 
-        // Live hour counter since 30 Jan 2019
-// Running Clock Since 30 Jan 2019
-function updateRunningClock() {
-    const startDate = new Date("2019-01-30T00:00:00");
-    const now = new Date();
+            let years = now.getFullYear() - startDate.getFullYear();
+            let months = now.getMonth() - startDate.getMonth();
+            let days = now.getDate() - startDate.getDate();
 
-    let years = now.getFullYear() - startDate.getFullYear();
-    let months = now.getMonth() - startDate.getMonth();
-    let days = now.getDate() - startDate.getDate();
+            if (days < 0) {
+                months--;
+                const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                days += prevMonth.getDate();
+            }
 
-    if (days < 0) {
-        months--;
-        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
-        days += prevMonth.getDate();
-    }
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
 
-    if (months < 0) {
-        years--;
-        months += 12;
-    }
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
 
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
+            const clockText = `Waiting since: ${years} year${years !== 1 ? 's' : ''}, ${months} month${months !== 1 ? 's' : ''}, ${days} day${days !== 1 ? 's' : ''}, ${hours}:${minutes}:${seconds}`;
 
-    const clockText = `Waiting since: ${years} year${years !== 1 ? 's' : ''}, ${months} month${months !== 1 ? 's' : ''}, ${days} day${days !== 1 ? 's' : ''}, ${hours}:${minutes}:${seconds}`;
-
-    const clockElement = document.getElementById("runningClock");
-    if (clockElement) {
-        clockElement.textContent = clockText;
-    }
-}
-updateRunningClock();
-setInterval(updateRunningClock, 1000);
-
-updateHourCounter();
-setInterval(updateHourCounter, 3600000); // Update every hour
-
+            const clockElement = document.getElementById("runningClock");
+            if (clockElement) {
+                clockElement.textContent = clockText;
+            }
+        }
+        
+        updateHourCounter();
+        updateRunningClock();
+        setInterval(updateHourCounter, 3600000); // Update every hour
+        setInterval(updateRunningClock, 1000);
         
         // Show reasons modal
         function showReasons() {
